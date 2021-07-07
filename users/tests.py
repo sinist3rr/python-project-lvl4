@@ -22,6 +22,7 @@ class UsersTest(TestCase):
             },
         )
         self.assertEqual(response.status_code, 302)
+        self.assertTrue(User.objects.filter(username="user2"))
 
     def test_update(self):
         response = self.client.post(
@@ -35,8 +36,10 @@ class UsersTest(TestCase):
             },
         )
         self.assertEqual(response.status_code, 302)
+        self.assertTrue(User.objects.filter(username="user3"))
 
     def test_delete(self):
         response = self.client.post('/users/1/delete/')
         self.assertEqual(response.status_code, 302)
+        self.assertEqual(User.objects.count(), 0)
 
