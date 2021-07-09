@@ -6,6 +6,8 @@ from django.views.generic.list import ListView
 from users.forms import RegistrationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
+from django.shortcuts import redirect
 from django.utils.translation import gettext
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
@@ -56,6 +58,10 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixi
     def test_func(self):
         return self.get_object().id == self.request.user.id
 
+    def handle_no_permission(self):
+        messages.error(self.request, 'У вас нет прав')
+        return redirect('login')
+
 
 class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """Delete user view."""
@@ -68,3 +74,9 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixi
 
     def test_func(self):
         return self.get_object().id == self.request.user.id
+
+    def handle_no_permission(self):
+        messages.error(self.request, 'У вас нет прав')
+        return redirect('login')
+
+
