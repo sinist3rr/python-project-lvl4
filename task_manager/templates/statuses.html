@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block title %}
+{% trans 'Статусы' %}
+{% endblock %}
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+    <h1>{% trans 'Статусы' %}</h1>
+    <p></p><a href="{% url 'create_status' %}">{% trans 'Создать статус' %}</a></p>
+    <table class="table table-striped table-light">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">{% trans 'Имя' %}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for status in statuses %}
+            <tr>
+                <td scope="row">{{ status.id }}</td>
+                <td scope="row">{{ status.name }}</td>
+                <td scope="row">
+                    <a href="{% url 'update_status' pk=status.id %}">{% trans 'Изменить' %}</a>
+                    <br>
+                    <a href="{% url 'delete_status' pk=status.id %}">{% trans 'Удалить' %}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

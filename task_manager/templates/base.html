@@ -35,7 +35,8 @@
     </nav>
   {% endblock %}
   <p>
-    {% include 'messages.html' %}
+      {% bootstrap_messages %}
+
     {% block content %}
     {% endblock %}
     </p>
