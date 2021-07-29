@@ -25,4 +25,4 @@ class LabelsTest(TestCase):
     def test_delete(self):
         response = self.client.post('/labels/1/delete/')
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(Label.objects.count(), 1)
+        self.assertEqual(Label.objects.count(), 0)
