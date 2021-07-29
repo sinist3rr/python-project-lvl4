@@ -9,6 +9,7 @@ from django.views.generic import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from .forms import LabelForm
 from .models import Label
+from tasks.models import Task
 
 
 class LabelsView(LoginRequiredMixin, ListView):
@@ -42,10 +43,12 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
     login_url = 'login'
     success_url = reverse_lazy('labels')
     success_message = gettext('Метка успешно удалена')
-    error_message = gettext(
-        'Невозможно удалить метку, потому что она используется',
-    )
 
     def delete(self, *args, **kwargs):
         obj = self.get_object()
-        return redirect(self.success_url)
+        if Task.objects.filter(labels__id=obj.id):
+            messages.error(self.request, "Эта метка используется.")
+            return redirect('labels')
+        else:
+            super(LabelDeleteView, self).delete(self.request, *args, **kwargs)
+            return redirect(self.success_url)
