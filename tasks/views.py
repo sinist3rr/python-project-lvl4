@@ -10,6 +10,8 @@ from django.contrib.auth.models import User
 from .forms import TaskForm
 from .models import Task
 from django.shortcuts import redirect
+from django_filters.views import FilterView
+from .filters import TasksFilter
 
 
 class TasksDetailView(LoginRequiredMixin, DetailView):
@@ -17,10 +19,11 @@ class TasksDetailView(LoginRequiredMixin, DetailView):
     template_name = 'task_detail.html'
 
 
-class TasksView(LoginRequiredMixin, ListView):
+class TasksView(LoginRequiredMixin, FilterView):
     model = Task
     template_name = 'tasks.html'
     login_url = 'login'
+    filterset_class = TasksFilter
     context_object_name = 'tasks'
 
 
