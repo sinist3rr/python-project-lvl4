@@ -38,7 +38,6 @@
           <label for="id_labels">{% trans 'Метка' %}</label>
           <div class="mr-2 ml-2">
             <select name="labels" class="form-control" title="" id="id_labels">
-              <option>----------</option>
               {% for label in filter.form.labels %}
                 {{ label }}
               {% endfor %}
