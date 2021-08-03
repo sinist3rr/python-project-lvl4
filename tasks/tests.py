@@ -2,6 +2,7 @@ from django.test import TestCase
 from statuses.models import Status
 from django.contrib.auth.models import User
 from .models import Task
+from .filters import TasksFilter
 
 
 class TasksTest(TestCase):
@@ -50,3 +51,21 @@ class TasksTest(TestCase):
         response = self.client.post('/tasks/1/delete/')
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Task.objects.count(), 0)
+
+    def test_filter(self):
+        Task.objects.create(
+            name='TestFilter',
+            description='TestFilter',
+            status=Status.objects.get(name='New'),
+            executor=User.objects.get(username='user1'),
+            creator=self.user,
+        )
+        result_executor = User.objects.get(username='user1')
+        qs = Task.objects.all()
+        filtered = TasksFilter(
+            data={'executor': result_executor},
+            queryset=qs,
+        )
+        filtrated_tasks = filtered.qs
+        expected_tasks = Task.objects.filter(executor=result_executor)
+        self.assertQuerysetEqual(filtrated_tasks, expected_tasks)
