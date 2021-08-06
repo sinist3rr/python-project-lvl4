@@ -1,12 +1,9 @@
-from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.utils.translation import gettext
 from django.views.generic import CreateView, DeleteView, DetailView, UpdateView
-from django.views.generic.list import ListView
-from django.contrib.auth.models import User
 from .forms import TaskForm
 from .models import Task
 from django.shortcuts import redirect
