@@ -9,7 +9,7 @@ test:
 	poetry run pytest --cov-report xml --cov=task_manager users/tests.py statuses/tests.py tasks/tests.py labels/tests.py
 
 lint:
-	poetry run flake8 task_manager
+	poetry run flake8 --exclude=*/migrations/* task_manager users statuses tasks labels
 	poetry run mypy task_manager
 
 selfcheck:
