@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.3.3"
+version = "0.3.5"
 description = ""
 authors = ["sinist3rr <darkfloki@protonmail.com>"]
 packages = [
@@ -15,6 +15,7 @@ gunicorn = "^20.1.0"
 django-bootstrap4 = "^2.3.1"
 django-filter = "^2.4.0"
 django-heroku = "^0.3.1"
+rollbar = "^0.16.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
