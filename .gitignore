@@ -8,6 +8,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+.env
 *.sqlite3
 coverage.xml
 
