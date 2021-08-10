@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-05 14:44+0300\n"
+"POT-Creation-Date: 2021-08-10 14:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,18 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: statuses/models.py:9
 msgid "Имя"
 msgstr "Имя"
 
-#: statuses/views.py:29
+#: statuses/views.py:28
 msgid "Статус успешно создан"
 msgstr "Статус успешно создан"
 
-#: statuses/views.py:38
+#: statuses/views.py:37
 msgid "Статус успешно изменён"
 msgstr "Статус успешно изменён"
 
-#: statuses/views.py:46
+#: statuses/views.py:45
 msgid "Статус успешно удалён"
 msgstr "Статус успешно удалён"
