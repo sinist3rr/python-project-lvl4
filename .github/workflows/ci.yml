@@ -30,6 +30,7 @@ jobs:
       uses: paambaati/codeclimate-action@v2.5.7
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
         DJANGO_SETTINGS_MODULE: task_manager.settings
       with:
         coverageCommand: make test
