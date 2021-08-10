@@ -34,13 +34,19 @@
             </li>
             {% endif %}
         </ul>
-        <ul class="navbar-nav">
+          <ul class="navbar-nav">
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="/login/">{% trans "Login" %}</a>
+                <a class="nav-link" href="/logout/">{% trans 'Logout' %}</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/login/">{% trans 'Login' %}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users/create/">{% trans "Sign_in" %}</a>
+                <a class="nav-link" href="/users/create/">{% trans 'Sign_in' %}</a>
             </li>
+            {% endif %}
         </ul>
       </div>
     </nav>

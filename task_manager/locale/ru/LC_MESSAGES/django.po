@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-10 14:50+0300\n"
+"POT-Creation-Date: 2021-08-10 15:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,23 +28,27 @@ msgstr "Менеджер задач"
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:27
+#: task_manager/templates/base.html:27 task_manager/templates/index.html:29
 msgid "Statuses"
 msgstr "Статусы"
 
-#: task_manager/templates/base.html:30
+#: task_manager/templates/base.html:30 task_manager/templates/index.html:32
 msgid "Labels"
 msgstr "Метки"
 
-#: task_manager/templates/base.html:33
+#: task_manager/templates/base.html:33 task_manager/templates/index.html:35
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/base.html:39 task_manager/templates/index.html:41
+#: task_manager/templates/base.html:40 task_manager/templates/index.html:42
+msgid "Logout"
+msgstr "Выход"
+
+#: task_manager/templates/base.html:44 task_manager/templates/index.html:46
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:42 task_manager/templates/index.html:44
+#: task_manager/templates/base.html:47 task_manager/templates/index.html:49
 msgid "Sign_in"
 msgstr "Регистрация"
 
@@ -70,20 +74,10 @@ msgstr "Да, удалить"
 msgid "Удаление статуса"
 msgstr "Удаление статуса"
 
-#: task_manager/templates/index.html:29 task_manager/templates/statuses.html:7
-#: task_manager/templates/statuses.html:12
-msgid "Статусы"
-msgstr "Статусы"
-
-#: task_manager/templates/index.html:32 task_manager/templates/labels.html:6
-#: task_manager/templates/labels.html:11
+#: task_manager/templates/labels.html:6 task_manager/templates/labels.html:11
 #: task_manager/templates/task_detail.html:38
 msgid "Метки"
 msgstr "Метки"
-
-#: task_manager/templates/index.html:35 task_manager/templates/tasks.html:11
-msgid "Задачи"
-msgstr "Задачи"
 
 #: task_manager/templates/labels.html:12
 msgid "Создать метку"
@@ -107,6 +101,11 @@ msgstr "Изменить"
 #: task_manager/templates/tasks.html:84 task_manager/templates/users.html:34
 msgid "Удалить"
 msgstr "Удалить"
+
+#: task_manager/templates/statuses.html:7
+#: task_manager/templates/statuses.html:12
+msgid "Статусы"
+msgstr "Статусы"
 
 #: task_manager/templates/statuses.html:13
 msgid "Создать статус"
@@ -145,6 +144,10 @@ msgstr "Дата создания"
 #: task_manager/templates/tasks.html:6
 msgid "Менеджер задач"
 msgstr "Менеджер задач"
+
+#: task_manager/templates/tasks.html:11
+msgid "Задачи"
+msgstr "Задачи"
 
 #: task_manager/templates/tasks.html:12
 msgid "Создать задачу"
