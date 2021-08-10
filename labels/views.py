@@ -24,7 +24,7 @@ class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     login_url = 'login'
     success_url = reverse_lazy('labels')
     template_name = 'create_label.html'
-    success_message = gettext('Метка успешно создана')
+    success_message = gettext('Label success created')
 
 
 class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
