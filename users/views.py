@@ -78,6 +78,11 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     success_url = reverse_lazy('users')
     success_message = gettext('Пользователь успешно удалён')
 
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        messages.success(self.request, self.success_message % obj.__dict__)
+        return super(UserDeleteView, self).delete(request, *args, **kwargs)
+
     def test_func(self):
         return self.get_object().id == self.request.user.id
 
