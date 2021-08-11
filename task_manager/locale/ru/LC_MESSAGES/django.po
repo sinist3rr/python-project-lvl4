@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-10 15:35+0300\n"
+"POT-Creation-Date: 2021-08-11 11:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,35 +20,35 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/base.html:16 task_manager/templates/index.html:18
+#: task_manager/templates/base.html:16
 msgid "Description"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/base.html:23 task_manager/templates/index.html:25
+#: task_manager/templates/base.html:23
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:27 task_manager/templates/index.html:29
+#: task_manager/templates/base.html:27
 msgid "Statuses"
 msgstr "Статусы"
 
-#: task_manager/templates/base.html:30 task_manager/templates/index.html:32
+#: task_manager/templates/base.html:30
 msgid "Labels"
 msgstr "Метки"
 
-#: task_manager/templates/base.html:33 task_manager/templates/index.html:35
+#: task_manager/templates/base.html:33
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/base.html:40 task_manager/templates/index.html:42
+#: task_manager/templates/base.html:40
 msgid "Logout"
 msgstr "Выход"
 
-#: task_manager/templates/base.html:44 task_manager/templates/index.html:46
+#: task_manager/templates/base.html:44
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:47 task_manager/templates/index.html:49
+#: task_manager/templates/base.html:47
 msgid "Sign_in"
 msgstr "Регистрация"
 
@@ -73,6 +73,10 @@ msgstr "Да, удалить"
 #: task_manager/templates/delete_status.html:11
 msgid "Удаление статуса"
 msgstr "Удаление статуса"
+
+#: task_manager/templates/index.html:7 task_manager/templates/tasks.html:6
+msgid "Менеджер задач"
+msgstr "Менеджер задач"
 
 #: task_manager/templates/labels.html:6 task_manager/templates/labels.html:11
 #: task_manager/templates/task_detail.html:38
@@ -140,10 +144,6 @@ msgstr "Статус"
 #: task_manager/templates/tasks.html:68 task_manager/templates/users.html:20
 msgid "Дата создания"
 msgstr "Дата создания"
-
-#: task_manager/templates/tasks.html:6
-msgid "Менеджер задач"
-msgstr "Менеджер задач"
 
 #: task_manager/templates/tasks.html:11
 msgid "Задачи"
