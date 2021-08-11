@@ -75,7 +75,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     model = User
     template_name = 'delete.html'
     login_url = 'login'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('users')
     success_message = gettext('Пользователь успешно удалён')
 
     def test_func(self):
