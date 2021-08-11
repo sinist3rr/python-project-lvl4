@@ -28,12 +28,14 @@ jobs:
         make lint
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        DATABASE_URL: 'sqlite:///db.sqlite3'
     - name: Run tests
       uses: paambaati/codeclimate-action@v2.5.7
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
         DJANGO_SETTINGS_MODULE: task_manager.settings
+        DATABASE_URL: 'sqlite:///db.sqlite3'
       with:
         coverageCommand: make test
 
