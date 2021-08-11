@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 11:45+0000\n"
+"POT-Creation-Date: 2021-08-11 13:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: users/views.py:34
-msgid "Вы залогинены"
+msgid "You logged in"
 msgstr "Вы залогинены"
 
-#: users/views.py:44
-msgid "Вы разлогинены"
+#: users/views.py:47
+msgid "You are logged out"
 msgstr "Вы разлогинены"
 
-#: users/views.py:56
+#: users/views.py:60
 msgid "Пользователь успешно изменён"
 msgstr "Пользователь успешно изменён"
 
-#: users/views.py:74
+#: users/views.py:78
 msgid "Пользователь успешно удалён"
 msgstr "Пользователь успешно удалён"

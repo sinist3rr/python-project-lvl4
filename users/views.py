@@ -31,7 +31,7 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     """User login view."""
 
     template_name = 'login.html'
-    success_message = gettext('Вы залогинены')
+    success_message = gettext('You logged in')
 
     def get_success_url(self):
         return reverse_lazy('index')
@@ -41,7 +41,11 @@ class UserLogoutView(SuccessMessageMixin, LogoutView):
     """User logout view."""
 
     next_page = reverse_lazy('index')
-    success_message = gettext('Вы разлогинены')
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            messages.info(request, gettext('You are logged out'))
+        return super().dispatch(request, *args, **kwargs)
 
 
 class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin,
