@@ -11,12 +11,13 @@ from django.utils.translation import gettext
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
-class UserCreateView(CreateView):
+class UserCreateView(SuccessMessageMixin, CreateView):
     """User registration view."""
 
     template_name = 'signup.html'
     form_class = RegistrationForm
     success_url = reverse_lazy('login')
+    success_message = gettext('User successfully registered')
 
 
 class UserListView(ListView):
