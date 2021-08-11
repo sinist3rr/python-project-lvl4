@@ -40,7 +40,7 @@ class UserLoginView(SuccessMessageMixin, LoginView):
 class UserLogoutView(SuccessMessageMixin, LogoutView):
     """User logout view."""
 
-    next_page = reverse_lazy('login')
+    next_page = reverse_lazy('index')
     success_message = gettext('Вы разлогинены')
 
 
