@@ -47,12 +47,18 @@ class TasksUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = gettext('SuccessUpdateTask')
 
 
-class TasksDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class TasksDeleteView(LoginRequiredMixin, UserPassesTestMixin,
+                      SuccessMessageMixin, DeleteView):
     model = Task
     template_name = 'task_delete.html'
     success_url = reverse_lazy('tasks')
     login_url = 'login'
     success_message = gettext('SuccessDeleteTask')
+
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        messages.success(self.request, self.success_message % obj.__dict__)
+        return super(TasksDeleteView, self).delete(request, *args, **kwargs)
 
     def test_func(self):
         return self.get_object().creator.id == self.request.user.id
