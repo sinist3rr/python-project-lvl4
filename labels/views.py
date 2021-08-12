@@ -24,7 +24,7 @@ class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     login_url = 'login'
     success_url = reverse_lazy('labels')
     template_name = 'create_label.html'
-    success_message = gettext('Label success created')
+    success_message = gettext('SuccessCreateLabel')
 
 
 class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -33,7 +33,7 @@ class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'update_label.html'
     login_url = 'login'
     success_url = reverse_lazy('labels')
-    success_message = gettext('Метка успешно изменена')
+    success_message = gettext('SuccessUpdateLabel')
 
 
 class LabelDeleteView(LoginRequiredMixin, DeleteView):
@@ -41,12 +41,12 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'delete_label.html'
     login_url = 'login'
     success_url = reverse_lazy('labels')
-    success_message = gettext('Метка успешно удалена')
+    success_message = gettext('SuccessDeleteLabel')
 
     def delete(self, *args, **kwargs):
         obj = self.get_object()
         if Task.objects.filter(labels__id=obj.id):
-            messages.error(self.request, "Эта метка используется.")
+            messages.error(self.request, gettext('CannotDeleteLabel'))
             return redirect('labels')
         else:
             super(LabelDeleteView, self).delete(self.request, *args, **kwargs)

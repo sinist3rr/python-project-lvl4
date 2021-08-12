@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 13:38+0000\n"
+"POT-Creation-Date: 2021-08-12 11:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,21 +21,25 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: users/views.py:20
-msgid "User successfully registered"
+msgid "SuccessCreateUser"
 msgstr "Пользователь успешно зарегистрирован"
 
 #: users/views.py:35
-msgid "You logged in"
+msgid "SuccessLoginUser"
 msgstr "Вы залогинены"
 
 #: users/views.py:48
-msgid "You are logged out"
+msgid "SuccessLogoutUser"
 msgstr "Вы разлогинены"
 
 #: users/views.py:61
-msgid "Пользователь успешно изменён"
+msgid "SuccessUpdateUser"
 msgstr "Пользователь успешно изменён"
 
+#: users/views.py:67 users/views.py:90
+msgid "ErrorUserDoNotHaveRights"
+msgstr "У вас нет прав для изменения другого пользователя"
+
 #: users/views.py:79
-msgid "Пользователь успешно удалён"
+msgid "SuccessDeleteUser"
 msgstr "Пользователь успешно удалён"

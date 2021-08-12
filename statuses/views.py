@@ -25,7 +25,7 @@ class StatusCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     login_url = 'login'
     success_url = reverse_lazy('statuses')
     template_name = 'create_status.html'
-    success_message = gettext('Статус успешно создан')
+    success_message = gettext('SuccessCreateStatus')
 
 
 class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
@@ -34,7 +34,7 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'update_status.html'
     login_url = 'login'
     success_url = reverse_lazy('statuses')
-    success_message = gettext('Статус успешно изменён')
+    success_message = gettext('SuccessUpdateStatus')
 
 
 class StatusDeleteView(LoginRequiredMixin, DeleteView):
@@ -42,12 +42,12 @@ class StatusDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'delete_status.html'
     login_url = 'login'
     success_url = reverse_lazy('statuses')
-    success_message = gettext('Статус успешно удалён')
+    success_message = gettext('SuccessDeleteStatus')
 
     def delete(self, *args, **kwargs):
         obj = self.get_object()
         if Task.objects.all().filter(status_id=obj.id):
-            messages.error(self.request, "Этот статус используется.")
+            messages.error(self.request, gettext('CannotDeleteStatus'))
             return redirect('tasks')
         else:
             super(StatusDeleteView, self).delete(self.request, *args, **kwargs)

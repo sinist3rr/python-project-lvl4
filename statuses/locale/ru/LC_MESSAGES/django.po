@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 13:38+0000\n"
+"POT-Creation-Date: 2021-08-12 11:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,17 +21,21 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: statuses/models.py:9
-msgid "Имя"
+msgid "StatusName"
 msgstr "Имя"
 
 #: statuses/views.py:28
-msgid "Статус успешно создан"
+msgid "SuccessCreateStatus"
 msgstr "Статус успешно создан"
 
 #: statuses/views.py:37
-msgid "Статус успешно изменён"
+msgid "SuccessUpdateStatus"
 msgstr "Статус успешно изменён"
 
 #: statuses/views.py:45
-msgid "Статус успешно удалён"
+msgid "SuccessDeleteStatus"
 msgstr "Статус успешно удалён"
+
+#: statuses/views.py:50
+msgid "CannotDeleteStatus"
+msgstr "Невозможно удалить статус, потому что он используется"

@@ -17,7 +17,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
     template_name = 'signup.html'
     form_class = RegistrationForm
     success_url = reverse_lazy('login')
-    success_message = gettext('User successfully registered')
+    success_message = gettext('SuccessCreateUser')
 
 
 class UserListView(ListView):
@@ -32,7 +32,7 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     """User login view."""
 
     template_name = 'login.html'
-    success_message = gettext('You logged in')
+    success_message = gettext('SuccessLoginUser')
 
     def get_success_url(self):
         return reverse_lazy('index')
@@ -45,7 +45,7 @@ class UserLogoutView(SuccessMessageMixin, LogoutView):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            messages.info(request, gettext('You are logged out'))
+            messages.info(request, gettext('SuccessLogoutUser'))
         return super().dispatch(request, *args, **kwargs)
 
 
@@ -58,13 +58,13 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin,
     form_class = RegistrationForm
     success_url = reverse_lazy('users')
     login_url = 'login'
-    success_message = gettext('Пользователь успешно изменён')
+    success_message = gettext('SuccessUpdateUser')
 
     def test_func(self):
         return self.get_object().id == self.request.user.id
 
     def handle_no_permission(self):
-        messages.error(self.request, 'У вас нет прав')
+        messages.error(self.request, gettext('ErrorUserDoNotHaveRights'))
         return redirect('login')
 
 
@@ -76,7 +76,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     template_name = 'delete.html'
     login_url = 'login'
     success_url = reverse_lazy('users')
-    success_message = gettext('Пользователь успешно удалён')
+    success_message = gettext('SuccessDeleteUser')
 
     def delete(self, request, *args, **kwargs):
         obj = self.get_object()
@@ -87,5 +87,5 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
         return self.get_object().id == self.request.user.id
 
     def handle_no_permission(self):
-        messages.error(self.request, 'У вас нет прав')
+        messages.error(self.request, gettext('ErrorUserDoNotHaveRights'))
         return redirect('login')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 13:38+0000\n"
+"POT-Creation-Date: 2021-08-12 11:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,33 +21,37 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: tasks/models.py:12
-msgid "Имя"
+msgid "TaskName"
 msgstr "Имя"
 
 #: tasks/models.py:18
-msgid "Описание"
+msgid "TaskDesc"
 msgstr "Описание"
 
 #: tasks/models.py:24
-msgid "Статус"
+msgid "TaskStatus"
 msgstr "Статус"
 
 #: tasks/models.py:32
-msgid "Исполнитель"
+msgid "TaskExec"
 msgstr "Исполнитель"
 
 #: tasks/models.py:44
-msgid "Метки"
+msgid "TaskLabel"
 msgstr "Метки"
 
 #: tasks/views.py:33
-msgid "Задача успешно создана"
+msgid "SuccessCreateTask"
 msgstr "Задача успешно создана"
 
 #: tasks/views.py:46
-msgid "Задача успешно изменена"
+msgid "SuccessUpdateTask"
 msgstr "Задача успешно изменена"
 
 #: tasks/views.py:54
-msgid "Задача успешно удалена"
+msgid "SuccessDeleteTask"
 msgstr "Задача успешно удалена"
+
+#: tasks/views.py:60
+msgid "CannotDeleteTask"
+msgstr "Задачу может удалить только её автор"

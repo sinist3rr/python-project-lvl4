@@ -9,19 +9,19 @@ from labels.models import Label
 class Task(Model):
     name = models.CharField(
         max_length=100,
-        verbose_name=gettext('Имя'),
+        verbose_name=gettext('TaskName'),
         unique=True,
     )
     description = models.TextField(
         max_length=500,
         blank=True,
-        verbose_name=gettext('Описание'),
+        verbose_name=gettext('TaskDesc'),
     )
     status = models.ForeignKey(
         Status,
         on_delete=models.PROTECT,
         null=True,
-        verbose_name=gettext('Статус'),
+        verbose_name=gettext('TaskStatus'),
     )
     executor = models.ForeignKey(
         User,
@@ -29,7 +29,7 @@ class Task(Model):
         related_name="task_executor",
         null=True,
         blank=True,
-        verbose_name=gettext('Исполнитель'),
+        verbose_name=gettext('TaskExec'),
     )
     creator = models.ForeignKey(
         User,
@@ -41,7 +41,7 @@ class Task(Model):
     labels = models.ManyToManyField(
         Label,
         blank=True,
-        verbose_name=gettext('Метки'),
+        verbose_name=gettext('TaskLabel'),
     )
 
     def __str__(self):

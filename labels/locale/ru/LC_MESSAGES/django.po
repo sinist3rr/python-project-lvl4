@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 13:38+0000\n"
+"POT-Creation-Date: 2021-08-12 11:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,20 +21,21 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: labels/models.py:9
-msgid "Имя"
+msgid "LabelName"
 msgstr "Имя"
 
 #: labels/views.py:27
-msgid "Label success created"
+msgid "SuccessCreateLabel"
 msgstr "Метка успешно создана"
 
 #: labels/views.py:36
-msgid "Метка успешно изменена"
+msgid "SuccessUpdateLabel"
 msgstr "Метка успешно изменена"
 
 #: labels/views.py:44
-msgid "Метка успешно удалена"
+msgid "SuccessDeleteLabel"
 msgstr "Метка успешно удалена"
 
-#~ msgid "Метка успешно создана"
-#~ msgstr "Метка успешно создана"
+#: labels/views.py:49
+msgid "CannotDeleteLabel"
+msgstr "Невозможно удалить метку, потому что она используется"

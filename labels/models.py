@@ -6,7 +6,7 @@ from django.utils.translation import gettext
 class Label(Model):
     name = models.CharField(
         max_length=100,
-        verbose_name=gettext('Имя'),
+        verbose_name=gettext('LabelName'),
         unique=True,
     )
 
