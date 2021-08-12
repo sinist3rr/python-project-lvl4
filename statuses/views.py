@@ -37,7 +37,7 @@ class StatusUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = gettext('SuccessUpdateStatus')
 
 
-class StatusDeleteView(LoginRequiredMixin, DeleteView):
+class StatusDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Status
     template_name = 'delete_status.html'
     login_url = 'login'
@@ -51,4 +51,5 @@ class StatusDeleteView(LoginRequiredMixin, DeleteView):
             return redirect('tasks')
         else:
             super(StatusDeleteView, self).delete(self.request, *args, **kwargs)
+            messages.success(self.request, self.success_message % obj.__dict__)
             return redirect(self.success_url)
