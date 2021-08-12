@@ -9,6 +9,7 @@ from .models import Task
 from django.shortcuts import redirect
 from django_filters.views import FilterView
 from .filters import TasksFilter
+from users.models import TaskUser
 
 
 class TasksDetailView(LoginRequiredMixin, DetailView):
@@ -33,7 +34,7 @@ class TasksCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     success_message = gettext('SuccessCreateTask')
 
     def form_valid(self, form):
-        form.instance.creator = self.request.user
+        form.instance.creator = TaskUser.objects.get(id=self.request.user.id)
         return super().form_valid(form)
 
 

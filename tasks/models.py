@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import Model
 from django.utils.translation import gettext
 from statuses.models import Status
-from django.contrib.auth.models import User
+from users.models import TaskUser
 from labels.models import Label
 
 
@@ -24,7 +24,7 @@ class Task(Model):
         verbose_name=gettext('TaskStatus'),
     )
     executor = models.ForeignKey(
-        User,
+        TaskUser,
         on_delete=models.PROTECT,
         related_name="task_executor",
         null=True,
@@ -32,7 +32,7 @@ class Task(Model):
         verbose_name=gettext('TaskExec'),
     )
     creator = models.ForeignKey(
-        User,
+        TaskUser,
         on_delete=models.PROTECT,
         related_name='task_creator',
         null=True,
