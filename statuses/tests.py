@@ -1,11 +1,11 @@
 from django.test import TestCase
 from .models import Status
-from django.contrib.auth.models import User
+from users.models import TaskUser
 
 
 class StatusesTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
+        self.user = TaskUser.objects.create_user(
             username='user1',
             password='Zde6v45rGBYx2LGx',
         )

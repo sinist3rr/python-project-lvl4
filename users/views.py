@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from users.models import TaskUser
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
@@ -24,7 +24,7 @@ class UserListView(ListView):
     """User list view."""
 
     template_name = 'users.html'
-    model = User
+    model = TaskUser
     context_object_name = 'users'
 
 
@@ -54,7 +54,7 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin,
     """Change user data view."""
 
     template_name = 'update.html'
-    model = User
+    model = TaskUser
     form_class = RegistrationForm
     success_url = reverse_lazy('users')
     login_url = 'login'
@@ -72,7 +72,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
                      SuccessMessageMixin, DeleteView):
     """Delete user view."""
 
-    model = User
+    model = TaskUser
     template_name = 'delete.html'
     login_url = 'login'
     success_url = reverse_lazy('users')

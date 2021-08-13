@@ -1,18 +1,18 @@
 from django.test import TestCase
 from statuses.models import Status
-from django.contrib.auth.models import User
+from users.models import TaskUser
 from .models import Task
 from .filters import TasksFilter
 
 
 class TasksTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
+        self.user = TaskUser.objects.create_user(
             username='user1',
             password='Zde6v45rGBYx2LGx',
         )
         self.client.force_login(self.user)
-        User.objects.create_user(
+        TaskUser.objects.create_user(
             username='user2',
             password='Zde6v45rGBYx2LGx',
         )
@@ -22,7 +22,7 @@ class TasksTest(TestCase):
             name='Task',
             description='Task',
             status=Status.objects.get(name='New'),
-            executor=User.objects.get(username='user2'),
+            executor=TaskUser.objects.get(username='user2'),
             creator=self.user,
         )
 
@@ -31,7 +31,7 @@ class TasksTest(TestCase):
             'name': 'Task2',
             'description': 'Task2',
             'status': Status.objects.get(name='New').id,
-            'executor': User.objects.get(username='user2').id,
+            'executor': TaskUser.objects.get(username='user2').id,
         })
         self.assertEqual(response.status_code, 302)
         self.assertTrue(Task.objects.filter(name="Task2"))
@@ -57,10 +57,10 @@ class TasksTest(TestCase):
             name='TestFilter',
             description='TestFilter',
             status=Status.objects.get(name='New'),
-            executor=User.objects.get(username='user1'),
+            executor=TaskUser.objects.get(username='user1'),
             creator=self.user,
         )
-        result_executor = User.objects.get(username='user1')
+        result_executor = TaskUser.objects.get(username='user1')
         qs = Task.objects.all()
         filtered = TasksFilter(
             data={'executor': result_executor},
