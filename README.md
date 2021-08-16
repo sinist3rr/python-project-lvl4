@@ -21,10 +21,10 @@
 
 ### Environment variables
 
-| Variable               | Default value         |   |   |   |
-|------------------------|-----------------------|---|---|---|
-| SECRET_KEY             | random secret key     |   |   |   |
-| DATABASE_URL           | sqlite:///db.sqlite3  |   |   |   |
-| DJANGO_SETTINGS_MODULE | task_manager.settings |   |   |   |
-|                        |                       |   |   |   |
+| Variable               | Used value                          | Description                                                                |
+|------------------------|-------------------------------------|----------------------------------------------------------------------------|
+| SECRET_KEY             | random secret key                   | set Django secret key                                                      |
+| DATABASE_URL           | sqlite:///db.sqlite3                | set the path to DB                                                         |
+| DJANGO_SETTINGS_MODULE | task_manager.settings               | tell Django which settings is using                                        |
+| ALLOWED_HOSTS          | ancient-hollows-77564.herokuapp.com | a list of strings representing the host/domain names that Django can serve |
 
