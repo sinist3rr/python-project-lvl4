@@ -27,5 +27,5 @@
 | DATABASE_URL           | sqlite:///db.sqlite3                | set the path to DB                                                         |
 | DJANGO_SETTINGS_MODULE | task_manager.settings               | tell Django which settings is using                                        |
 | ALLOWED_HOSTS          | ancient-hollows-77564.herokuapp.com | a list of strings representing the host/domain names that Django can serve |
-| DEBUG                  | True                                | a boolean that turns on/off debug mode                                     |
+| DEBUG                  | -                                   | a boolean that turns on/off debug mode                                     |
 
