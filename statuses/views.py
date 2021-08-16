@@ -51,5 +51,5 @@ class StatusDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
             return redirect('tasks')
         else:
             super(StatusDeleteView, self).delete(self.request, *args, **kwargs)
-            messages.success(self.request, self.success_message % obj.__dict__)
+            messages.success(self.request, self.success_message)
             return redirect(self.success_url)

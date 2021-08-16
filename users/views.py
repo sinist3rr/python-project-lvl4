@@ -79,8 +79,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     success_message = gettext('SuccessDeleteUser')
 
     def delete(self, request, *args, **kwargs):
-        obj = self.get_object()
-        messages.success(self.request, self.success_message % obj.__dict__)
+        messages.success(self.request, self.success_message)
         return super(UserDeleteView, self).delete(request, *args, **kwargs)
 
     def test_func(self):
