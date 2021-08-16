@@ -4,6 +4,9 @@ install:
 run:
 	poetry run python manage.py runserver
 
+migrate:
+	poetry run python manage.py migrate
+
 test:
 	export DJANGO_SETTINGS_MODULE=task_manager.settings
 	poetry run pytest --cov-report xml --cov=task_manager users/tests.py statuses/tests.py tasks/tests.py labels/tests.py
