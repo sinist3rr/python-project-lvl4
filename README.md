@@ -8,7 +8,23 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/sinist3rr/python-project-lvl4/workflows/hexlet-check/badge.svg)](https://github.com/sinist3rr/python-project-lvl4/actions)
 
+### Installation
+* Install [poetry](https://python-poetry.org/docs/#installation)
+* ```git clone https://github.com/sinist3rr/python-project-lvl4.git```
+* ```cd python-project-lvl4/ && make install && make migrate && make run```
+***
+
 ### URL
 
 [Check online at Heroku](https://ancient-hollows-77564.herokuapp.com/)
+
+
+### Environment variables
+
+| Variable               | Default value         |   |   |   |
+|------------------------|-----------------------|---|---|---|
+| SECRET_KEY             | random secret key     |   |   |   |
+| DATABASE_URL           | sqlite:///db.sqlite3  |   |   |   |
+| DJANGO_SETTINGS_MODULE | task_manager.settings |   |   |   |
+|                        |                       |   |   |   |
 
