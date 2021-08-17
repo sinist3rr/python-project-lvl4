@@ -19,7 +19,6 @@ class TasksDetailView(LoginRequiredMixin, DetailView):
 class TasksView(LoginRequiredMixin, FilterView):
     model = Task
     template_name = 'tasks/tasks.html'
-    login_url = 'login'
     filterset_class = TasksFilter
     context_object_name = 'tasks'
 
@@ -27,7 +26,6 @@ class TasksView(LoginRequiredMixin, FilterView):
 class TasksCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Task
     form_class = TaskForm
-    login_url = 'login'
     success_url = reverse_lazy('tasks')
     template_name = 'tasks/task_create.html'
     success_message = gettext('SuccessCreateTask')
@@ -41,7 +39,6 @@ class TasksUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
     form_class = TaskForm
     template_name = 'tasks/task_update.html'
-    login_url = 'login'
     success_url = reverse_lazy('tasks')
     success_message = gettext('SuccessUpdateTask')
 
@@ -51,7 +48,6 @@ class TasksDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     model = Task
     template_name = 'tasks/task_delete.html'
     success_url = reverse_lazy('tasks')
-    login_url = 'login'
     success_message = gettext('SuccessDeleteTask')
 
     def delete(self, request, *args, **kwargs):

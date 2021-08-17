@@ -138,6 +138,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_URL = 'login'
+
 django_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)

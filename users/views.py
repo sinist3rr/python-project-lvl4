@@ -57,7 +57,6 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin,
     model = TaskUser
     form_class = RegistrationForm
     success_url = reverse_lazy('users')
-    login_url = 'login'
     success_message = gettext('SuccessUpdateUser')
 
     def test_func(self):
@@ -74,7 +73,6 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
 
     model = TaskUser
     template_name = 'users/delete_user.html'
-    login_url = 'login'
     success_url = reverse_lazy('users')
     success_message = gettext('SuccessDeleteUser')
 
