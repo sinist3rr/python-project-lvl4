@@ -41,7 +41,7 @@ class Task(Model):
     labels = models.ManyToManyField(
         Label,
         blank=True,
-        verbose_name=gettext('TaskLabel'),
+        verbose_name=gettext('TaskLabels'),
     )
 
     def __str__(self):
