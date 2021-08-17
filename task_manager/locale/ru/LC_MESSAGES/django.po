@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 13:32+0000\n"
+"POT-Creation-Date: 2021-08-17 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,6 +121,7 @@ msgstr "Имя"
 #: task_manager/templates/tasks/task_detail.html:48
 #: task_manager/templates/tasks/task_update.html:16
 #: task_manager/templates/tasks/tasks.html:82
+#: task_manager/templates/users/update_user.html:17
 #: task_manager/templates/users/users.html:32
 msgid "Update"
 msgstr "Изменить"
@@ -197,6 +198,37 @@ msgstr "Метка"
 msgid "FilterTasks"
 msgstr "Только свои задачи"
 
+#: task_manager/templates/users/create_user.html:8
+msgid "CreateUsers"
+msgstr "Регистрация"
+
+#: task_manager/templates/users/create_user.html:15
+msgid "CreateUser"
+msgstr "Зарегистрировать"
+
+#: task_manager/templates/users/delete_user.html:7
+#: task_manager/templates/users/delete_user.html:12
+msgid "DeleteUser"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete_user.html:15
+msgid "AreYouSureToDeleteUser"
+msgstr "Вы уверены, что хотите удалить "
+
+#: task_manager/templates/users/login.html:6
+#: task_manager/templates/users/login.html:12
+msgid "LoginUsers"
+msgstr "Вход"
+
+#: task_manager/templates/users/login.html:18
+msgid "LoginButton"
+msgstr "Войти"
+
+#: task_manager/templates/users/update_user.html:6
+#: task_manager/templates/users/update_user.html:11
+msgid "UpdateUsers"
+msgstr "Изменение"
+
 #: task_manager/templates/users/users.html:18
 msgid "UserName"
 msgstr "Имя пользователя"
@@ -204,3 +236,7 @@ msgstr "Имя пользователя"
 #: task_manager/templates/users/users.html:19
 msgid "FullName"
 msgstr "Полное имя"
+
+#: task_manager/templates/users/users.html:38
+msgid "UsersNotFound"
+msgstr "Пользователи не найдены."

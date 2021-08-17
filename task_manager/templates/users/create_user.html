@@ -5,13 +5,15 @@
 
 {% block content %}
 
-<h1>Регистрация</h1>
+<h1>{% translate 'CreateUsers' %}</h1>
 
 <form role="form" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% bootstrap_form_errors form type='fields' %}
-    {% buttons submit='Зарегистрировать'%}{% endbuttons %}
+    {% buttons %}
+                <button type="submit" class="btn btn-outline-info">{% translate 'CreateUser' %}</button>
+            {% endbuttons %}
 </form>
 
 {% endblock %}

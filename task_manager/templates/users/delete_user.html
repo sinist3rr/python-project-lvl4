@@ -3,14 +3,16 @@
 
 {% load bootstrap4 %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}
+{% trans 'DeleteUser' %}
+{% endblock %}
 
 {% block content %}
 
-<h1>Удаление пользователя</h1>
+<h1>{% trans 'DeleteUser' %}</h1>
 
 <form method="post">{% csrf_token %}
-    <p>Вы уверены, что хотите удалить {{ object }}?</p>
+    <p>{% trans 'AreYouSureToDeleteUser' %}{{ object }}'?'</p>
     {% bootstrap_button "Да, удалить" button_type="submit" button_class="btn-danger" %}
 </form>
 

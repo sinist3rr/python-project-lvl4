@@ -3,16 +3,19 @@
 {% load i18n %}
 {% load bootstrap4 %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}{% translate 'UpdateUsers' %}
+{% endblock %}
 
 {% block content %}
 
-<h1>Изменение</h1>
+<h1>{% translate 'UpdateUsers' %}</h1>
 <form role="form" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% bootstrap_form_errors form type='fields' %}
-    {% buttons submit='Изменить'%}{% endbuttons %}
+    {% buttons %}
+                <button type="submit" class="btn btn-outline-info">{% translate 'Update' %}</button>
+            {% endbuttons %}
 </form>
 
 {% endblock %}
