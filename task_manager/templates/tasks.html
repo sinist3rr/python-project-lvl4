@@ -3,19 +3,19 @@
 {% load bootstrap4 %}
 
 {% block title %}
-{% trans 'Менеджер задач' %}
+{% trans 'Tasks' %}
 {% endblock %}
 
 {% block content %}
 <div class="container wrapper flex-grow-1">
-    <h1>{% trans 'Задачи' %}</h1>
-    <p><a href="{% url 'create_task' %}" class="mr-3">{% trans 'Создать задачу' %}</a></p>
+    <h1>{% trans 'Tasks' %}</h1>
+    <p><a href="{% url 'create_task' %}" class="mr-3">{% trans 'CreateTask' %}</a></p>
 
     <div class="card mb-3">
     <div class="card-body bg-light">
     <form class="form-inline justify-content-center" method="get">
         <div class="form-group">
-          <label for="id_status">{% trans 'Статус' %}</label>
+          <label for="id_status">{% trans 'TaskStatus' %}</label>
           <div class="mr-2 ml-2">
             <select name="status" class="form-control" title="" id="id_status">
               {% for status in filter.form.status %}
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="id_executor">{% trans 'Исполнитель' %}</label>
+          <label for="id_executor">{% trans 'TaskExecutor' %}</label>
           <div class="mr-2 ml-2">
             <select name="executor" class="form-control" title="" id="id_executor">
               {% for executor in filter.form.executor %}
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="id_labels">{% trans 'Метка' %}</label>
+          <label for="id_labels">{% trans 'TaskLabel' %}</label>
           <div class="mr-2 ml-2">
             <select name="labels" class="form-control" title="" id="id_labels">
               {% for label in filter.form.labels %}
@@ -48,7 +48,7 @@
           <div class="mr-2 ml-2">
             <div class="form-check">
               <input type="checkbox" name="self_task" class="form-check-input" id="id_self_task" value="{{ filter.form.self_task.value }}">
-              <label class="form-check-label" for="id_self_task">{% trans 'Только свои задачи' %}</label>
+              <label class="form-check-label" for="id_self_task">{% trans 'FilterTasks' %}</label>
             </div>
           </div>
         </div>
@@ -61,11 +61,11 @@
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">{% trans 'Имя' %}</th>
-                <th scope="col">{% trans 'Статус' %}</th>
-                <th scope="col">{% trans 'Автор' %}</th>
-                <th scope="col">{% trans 'Исполнитель' %}</th>
-                <th scope="col">{% trans 'Дата создания' %}</th>
+                <th scope="col">{% trans 'Name' %}</th>
+                <th scope="col">{% trans 'TaskStatus' %}</th>
+                <th scope="col">{% trans 'TaskCreator' %}</th>
+                <th scope="col">{% trans 'TaskExecutor' %}</th>
+                <th scope="col">{% trans 'TaskCreateDate' %}</th>
                 <th></th>
             </tr>
         </thead>
@@ -79,9 +79,9 @@
                 <td scope="row">{{ task.executor }}</td>
                 <td scope="row">{{ task.added_at|date:'d-m-Y H:i' }}</td>
                 <td scope="row">
-                    <a href="{% url 'update_task' pk=task.id %}">{% trans 'Изменить' %}</a>
+                    <a href="{% url 'update_task' pk=task.id %}">{% trans 'Update' %}</a>
                     <br>
-                    <a href="{% url 'delete_task' pk=task.id %}">{% trans 'Удалить' %}</a>
+                    <a href="{% url 'delete_task' pk=task.id %}">{% trans 'Delete' %}</a>
                 </td>
             </tr>
             {% endfor %}

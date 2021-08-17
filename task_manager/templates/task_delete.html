@@ -3,16 +3,16 @@
 {% load bootstrap4 %}
 
 {% block title %}
-{% trans 'Удаление задачи' %}
+{% trans 'DeleteTask' %}
 {% endblock %}
 
 {% block content %}
 <div class="container wrapper flex-grow-1">
-    <h1>{% trans 'Удаление задачи' %}</h1>
+    <h1>{% trans 'DeleteTask' %}</h1>
     <form method="post">
         {% csrf_token %}
-        <p>{% trans 'Вы уверены, что хотите удалить ' %}{{ task.name }}'?'</p>
-        <button type="submit">{% trans 'Да, удалить' %}</button>
+        <p>{% trans 'AreYouSureToDeleteTask' %}{{ task.name }}'?'</p>
+        <button type="submit">{% trans 'DeleteConfirm' %}</button>
     </form>
 </div>
 {% endblock %}
