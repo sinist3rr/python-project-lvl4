@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 15:08+0300\n"
+"POT-Creation-Date: 2021-08-17 15:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,7 @@ msgstr "Статусы"
 #: task_manager/templates/base.html:30 task_manager/templates/labels.html:6
 #: task_manager/templates/labels.html:11
 #: task_manager/templates/task_detail.html:38
+#: task_manager/templates/tasks.html:38
 msgid "Labels"
 msgstr "Метки"
 
@@ -146,10 +147,6 @@ msgstr "Дата создания"
 #: task_manager/templates/tasks.html:12
 msgid "CreateTask"
 msgstr "Создать задачу"
-
-#: task_manager/templates/tasks.html:38
-msgid "TaskLabel"
-msgstr "Метка"
 
 #: task_manager/templates/tasks.html:51
 msgid "FilterTasks"
