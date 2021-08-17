@@ -3,12 +3,12 @@
 {% load bootstrap4 %}
 
 {% block title %}
-{{ headline }}
+{% trans 'Statuses' %}
 {% endblock %}
 
 {% block content %}
 <div class="container wrapper flex-grow-1">
-    <h1>{{ headline }}</h1>
+    <h1>{% trans 'Statuses' %}</h1>
     <form method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
