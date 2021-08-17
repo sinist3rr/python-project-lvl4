@@ -13,12 +13,12 @@ from .filters import TasksFilter
 
 class TasksDetailView(LoginRequiredMixin, DetailView):
     model = Task
-    template_name = 'task_detail.html'
+    template_name = 'tasks/task_detail.html'
 
 
 class TasksView(LoginRequiredMixin, FilterView):
     model = Task
-    template_name = 'tasks.html'
+    template_name = 'tasks/tasks.html'
     login_url = 'login'
     filterset_class = TasksFilter
     context_object_name = 'tasks'
@@ -29,7 +29,7 @@ class TasksCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = TaskForm
     login_url = 'login'
     success_url = reverse_lazy('tasks')
-    template_name = 'task_create.html'
+    template_name = 'tasks/task_create.html'
     success_message = gettext('SuccessCreateTask')
 
     def form_valid(self, form):
@@ -40,7 +40,7 @@ class TasksCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 class TasksUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
     form_class = TaskForm
-    template_name = 'task_update.html'
+    template_name = 'tasks/task_update.html'
     login_url = 'login'
     success_url = reverse_lazy('tasks')
     success_message = gettext('SuccessUpdateTask')
@@ -49,7 +49,7 @@ class TasksUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 class TasksDeleteView(LoginRequiredMixin, UserPassesTestMixin,
                       SuccessMessageMixin, DeleteView):
     model = Task
-    template_name = 'task_delete.html'
+    template_name = 'tasks/task_delete.html'
     success_url = reverse_lazy('tasks')
     login_url = 'login'
     success_message = gettext('SuccessDeleteTask')

@@ -14,7 +14,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 class UserCreateView(SuccessMessageMixin, CreateView):
     """User registration view."""
 
-    template_name = 'signup.html'
+    template_name = 'users/create_user.html'
     form_class = RegistrationForm
     success_url = reverse_lazy('login')
     success_message = gettext('SuccessCreateUser')
@@ -23,7 +23,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
 class UserListView(ListView):
     """User list view."""
 
-    template_name = 'users.html'
+    template_name = 'users/users.html'
     model = TaskUser
     context_object_name = 'users'
 
@@ -31,7 +31,7 @@ class UserListView(ListView):
 class UserLoginView(SuccessMessageMixin, LoginView):
     """User login view."""
 
-    template_name = 'login.html'
+    template_name = 'users/login.html'
     success_message = gettext('SuccessLoginUser')
 
     def get_success_url(self):
@@ -53,7 +53,7 @@ class UserUpdateView(LoginRequiredMixin, UserPassesTestMixin,
                      SuccessMessageMixin, UpdateView):
     """Change user data view."""
 
-    template_name = 'update.html'
+    template_name = 'users/update_user.html'
     model = TaskUser
     form_class = RegistrationForm
     success_url = reverse_lazy('users')
@@ -73,7 +73,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     """Delete user view."""
 
     model = TaskUser
-    template_name = 'delete.html'
+    template_name = 'users/delete_user.html'
     login_url = 'login'
     success_url = reverse_lazy('users')
     success_message = gettext('SuccessDeleteUser')

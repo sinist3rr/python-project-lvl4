@@ -13,7 +13,7 @@ from tasks.models import Task
 
 class LabelsView(LoginRequiredMixin, ListView):
     model = Label
-    template_name = 'labels.html'
+    template_name = 'labels/labels.html'
     form_class = LabelForm
     login_url = 'login'
 
@@ -23,14 +23,14 @@ class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = LabelForm
     login_url = 'login'
     success_url = reverse_lazy('labels')
-    template_name = 'create_label.html'
+    template_name = 'labels/create_label.html'
     success_message = gettext('SuccessCreateLabel')
 
 
 class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Label
     form_class = LabelForm
-    template_name = 'update_label.html'
+    template_name = 'labels/update_label.html'
     login_url = 'login'
     success_url = reverse_lazy('labels')
     success_message = gettext('SuccessUpdateLabel')
@@ -38,7 +38,7 @@ class LabelUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 class LabelDeleteView(LoginRequiredMixin, DeleteView):
     model = Label
-    template_name = 'delete_label.html'
+    template_name = 'labels/delete_label.html'
     login_url = 'login'
     success_url = reverse_lazy('labels')
     success_message = gettext('SuccessDeleteLabel')
