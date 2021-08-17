@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 13:11+0000\n"
+"POT-Creation-Date: 2021-08-17 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,9 +76,10 @@ msgid "WelcomeMessage"
 msgstr "Добро пожаловать!"
 
 #: task_manager/templates/labels/create_label.html:16
-#: task_manager/templates/labels/labels.html:12
-msgid "CreateLabel"
-msgstr "Создать метку"
+#: task_manager/templates/statuses/create_status.html:16
+#: task_manager/templates/tasks/task_create.html:16
+msgid "CreateButton"
+msgstr "Создать"
 
 #: task_manager/templates/labels/delete_label.html:6
 #: task_manager/templates/labels/delete_label.html:11
@@ -94,6 +95,10 @@ msgstr "Вы уверены, что хотите удалить "
 #: task_manager/templates/tasks/task_delete.html:15
 msgid "DeleteConfirm"
 msgstr "Да, удалить"
+
+#: task_manager/templates/labels/labels.html:12
+msgid "CreateLabel"
+msgstr "Создать метку"
 
 #: task_manager/templates/labels/labels.html:17
 #: task_manager/templates/statuses/statuses.html:18
@@ -118,13 +123,10 @@ msgid "Delete"
 msgstr "Удалить"
 
 #: task_manager/templates/labels/update_label.html:16
-msgid "UpdateLabel"
-msgstr "Изменить метку"
-
-#: task_manager/templates/statuses/create_status.html:16
-#: task_manager/templates/statuses/statuses.html:13
-msgid "CreateStatus"
-msgstr "Создать статус"
+#: task_manager/templates/statuses/update_status.html:16
+#: task_manager/templates/tasks/task_update.html:16
+msgid "UpdateButton"
+msgstr "Изменить"
 
 #: task_manager/templates/statuses/delete_status.html:6
 #: task_manager/templates/statuses/delete_status.html:11
@@ -135,9 +137,9 @@ msgstr "Удаление статуса"
 msgid "AreYouSureToDeleteStatus"
 msgstr "Вы уверены, что хотите удалить "
 
-#: task_manager/templates/statuses/update_status.html:16
-msgid "UpdateStatus"
-msgstr "Изменить статус"
+#: task_manager/templates/statuses/statuses.html:13
+msgid "CreateStatus"
+msgstr "Создать статус"
 
 #: task_manager/templates/tasks/task_delete.html:6
 #: task_manager/templates/tasks/task_delete.html:11
