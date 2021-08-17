@@ -14,7 +14,6 @@ from tasks.models import Task
 class LabelsView(LoginRequiredMixin, ListView):
     model = Label
     template_name = 'labels/labels.html'
-    form_class = LabelForm
 
 
 class LabelCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):

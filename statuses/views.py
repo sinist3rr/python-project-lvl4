@@ -14,7 +14,6 @@ from tasks.models import Task
 class StatusesView(LoginRequiredMixin, ListView):
     model = Status
     template_name = 'statuses/statuses.html'
-    form_class = StatusForm
     context_object_name = 'statuses'
 
 
