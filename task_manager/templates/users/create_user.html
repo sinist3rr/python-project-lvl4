@@ -1,11 +1,11 @@
 
 {% extends "base.html" %}
-
+{% load i18n %}
 {% load bootstrap4 %}
 
 {% block content %}
 
-<h1>{% translate 'CreateUsers' %}</h1>
+<h1>{% trans 'CreateUsers' %}</h1>
 
 <form role="form" method="post">
     {% csrf_token %}
