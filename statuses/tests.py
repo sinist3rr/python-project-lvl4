@@ -26,3 +26,16 @@ class StatusesTest(TestCase):
         response = self.client.post('/statuses/1/delete/')
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Status.objects.count(), 0)
+
+    def test_delete_used_status(self):
+        self.client.post('/statuses/create/', {'name': 'used_status'})
+        self.client.post('/tasks/create/', {
+            'name': 'Task',
+            'description': 'Task',
+            'status': Status.objects.get(name='used_status').id,
+            'executor': TaskUser.objects.get(username='user1').id,
+        })
+        response = self.client.post('/statuses/1/delete/')
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(Status.objects.filter(name="used_status"))
+        self.assertEqual(Status.objects.count(), 1)
