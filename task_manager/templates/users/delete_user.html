@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
@@ -8,12 +7,12 @@
 {% endblock %}
 
 {% block content %}
-
-<h1>{% trans 'DeleteUser' %}</h1>
-
-<form method="post">{% csrf_token %}
-    <p>{% trans 'AreYouSureToDeleteUser' %}{{ object }}'?'</p>
-    {% bootstrap_button "Да, удалить" button_type="submit" button_class="btn-danger" %}
-</form>
-
+<div class="container wrapper flex-grow-1">
+    <h1>{% trans 'DeleteUser' %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>{% trans 'AreYouSureToDeleteUser' %}{{ object }}'?'</p>
+        <button type="button" class="btn btn-danger">{% trans 'DeleteConfirm' %}</button>
+    </form>
+</div>
 {% endblock %}
