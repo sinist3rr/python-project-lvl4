@@ -85,4 +85,4 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
 
     def handle_no_permission(self):
         messages.error(self.request, gettext('ErrorUserDoNotHaveRights'))
-        return redirect('login')
+        return redirect('users')
