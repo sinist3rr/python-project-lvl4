@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "update_base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
 
@@ -6,9 +6,6 @@
 {% trans 'Labels' %}
 {% endblock %}
 
-{% block content %}
-<div class="container wrapper flex-grow-1">
+{% block update_header %}
     <h1>{% trans 'Labels' %}</h1>
-    {% include "update_base.html" %}
-</div>
 {% endblock %}

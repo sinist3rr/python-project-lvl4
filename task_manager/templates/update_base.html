@@ -1,11 +1,17 @@
+{% extends "base.html" %}
 {% load bootstrap4 %}
-{% block create_form %}
+{% block content %}
 {% load i18n %}
-<form method="post">
+<div class="container wrapper flex-grow-1">
+    {% block update_header %}
+    <h1>something</h1>
+    {% endblock %}
+    <form method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
         {% buttons %}
                 <button type="submit" class="btn btn-outline-info">{% translate 'Update' %}</button>
             {% endbuttons %}
     </form>
+</div>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-18 11:53+0000\n"
+"POT-Creation-Date: 2021-08-18 13:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,21 +36,21 @@ msgstr "Пользователи"
 
 #: task_manager/templates/base.html:27
 #: task_manager/templates/statuses/create_status.html:6
-#: task_manager/templates/statuses/create_status.html:11
+#: task_manager/templates/statuses/create_status.html:10
 #: task_manager/templates/statuses/statuses.html:7
 #: task_manager/templates/statuses/statuses.html:12
 #: task_manager/templates/statuses/update_status.html:6
-#: task_manager/templates/statuses/update_status.html:11
+#: task_manager/templates/statuses/update_status.html:10
 msgid "Statuses"
 msgstr "Статусы"
 
 #: task_manager/templates/base.html:30
 #: task_manager/templates/labels/create_label.html:6
-#: task_manager/templates/labels/create_label.html:11
+#: task_manager/templates/labels/create_label.html:10
 #: task_manager/templates/labels/labels.html:6
 #: task_manager/templates/labels/labels.html:11
 #: task_manager/templates/labels/update_label.html:6
-#: task_manager/templates/labels/update_label.html:11
+#: task_manager/templates/labels/update_label.html:10
 #: task_manager/templates/tasks/task_detail.html:38
 msgid "Labels"
 msgstr "Метки"
@@ -75,7 +75,7 @@ msgstr "Вход"
 msgid "Sign_in"
 msgstr "Регистрация"
 
-#: task_manager/templates/create_base.html:8
+#: task_manager/templates/create_base.html:13
 msgid "CreateButton"
 msgstr "Создать"
 
@@ -116,7 +116,7 @@ msgstr "Имя"
 #: task_manager/templates/statuses/statuses.html:28
 #: task_manager/templates/tasks/task_detail.html:48
 #: task_manager/templates/tasks/tasks.html:82
-#: task_manager/templates/update_base.html:8
+#: task_manager/templates/update_base.html:15
 #: task_manager/templates/users/users.html:32
 msgid "Update"
 msgstr "Изменить"
@@ -143,7 +143,7 @@ msgid "CreateStatus"
 msgstr "Создать статус"
 
 #: task_manager/templates/tasks/task_create.html:6
-#: task_manager/templates/tasks/task_create.html:11
+#: task_manager/templates/tasks/task_create.html:10
 #: task_manager/templates/tasks/tasks.html:12
 msgid "CreateTask"
 msgstr "Создать задачу"
@@ -181,7 +181,7 @@ msgid "TaskCreateDate"
 msgstr "Дата создания"
 
 #: task_manager/templates/tasks/task_update.html:6
-#: task_manager/templates/tasks/task_update.html:11
+#: task_manager/templates/tasks/task_update.html:10
 msgid "UpdateTask"
 msgstr "Изменение задачи"
 
@@ -220,7 +220,7 @@ msgid "LoginButton"
 msgstr "Войти"
 
 #: task_manager/templates/users/update_user.html:6
-#: task_manager/templates/users/update_user.html:11
+#: task_manager/templates/users/update_user.html:10
 msgid "UpdateUsers"
 msgstr "Изменение"
 
