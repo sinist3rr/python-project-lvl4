@@ -1,21 +1,14 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
 
-{% block title %}{% translate 'UpdateUsers' %}
+{% block title %}
+{% translate 'UpdateUsers' %}
 {% endblock %}
 
 {% block content %}
-
-<h1>{% translate 'UpdateUsers' %}</h1>
-<form role="form" method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% bootstrap_form_errors form type='fields' %}
-    {% buttons %}
-                <button type="submit" class="btn btn-outline-info">{% translate 'Update' %}</button>
-            {% endbuttons %}
-</form>
-
+<div class="container wrapper flex-grow-1">
+    <h1>{% translate 'UpdateUsers' %}</h1>
+    {% include "update_base.html" %}
+</div>
 {% endblock %}
