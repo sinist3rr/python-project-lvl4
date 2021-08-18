@@ -10,7 +10,6 @@ class Task(Model):
     name = models.CharField(
         max_length=100,
         verbose_name=gettext('TaskName'),
-        unique=True,
     )
     description = models.TextField(
         max_length=500,
