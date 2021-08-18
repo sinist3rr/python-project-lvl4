@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.translation import gettext
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from tasks.models import Task
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
@@ -75,10 +76,7 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     template_name = 'users/delete_user.html'
     success_url = reverse_lazy('users')
     success_message = gettext('SuccessDeleteUser')
-
-    def delete(self, request, *args, **kwargs):
-        messages.success(self.request, self.success_message)
-        return super(UserDeleteView, self).delete(request, *args, **kwargs)
+    error_message = gettext('CannotDeleteUser')
 
     def test_func(self):
         return self.get_object().id == self.request.user.id
@@ -86,3 +84,13 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin,
     def handle_no_permission(self):
         messages.error(self.request, gettext('ErrorUserDoNotHaveRights'))
         return redirect('users')
+
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if Task.objects.all().filter(executor=obj.id) or Task.objects.all().filter(creator=obj.id):  # noqa E501
+            messages.error(self.request, self.error_message)
+            return redirect('users')
+        else:
+            super(UserDeleteView, self).delete(self.request, *args, **kwargs)
+            messages.success(self.request, self.success_message)
+            return redirect(self.success_url)

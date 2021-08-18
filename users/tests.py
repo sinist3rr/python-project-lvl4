@@ -1,5 +1,6 @@
 from django.test import TestCase
 from users.models import TaskUser
+from statuses.models import Status
 
 
 class UsersTest(TestCase):
@@ -42,3 +43,25 @@ class UsersTest(TestCase):
         response = self.client.post('/users/1/delete/')
         self.assertEqual(response.status_code, 302)
         self.assertEqual(TaskUser.objects.count(), 0)
+
+    def test_delete_used_user(self):
+        self.client.post(
+            '/users/create/',
+            {
+                'first_name': 'user',
+                'last_name': 'user',
+                'username': 'user_in_use',
+                'password1': 'Zde6v45rGBYx2LGx',
+                'password2': 'Zde6v45rGBYx2LGx',
+            },
+        )
+        self.client.post('/statuses/create/', {'name': 'status'})
+        self.client.post('/tasks/create/', {
+            'name': 'Task',
+            'description': 'Task',
+            'status': Status.objects.get(name='status').id,
+            'executor': TaskUser.objects.get(username='user_in_use').id,
+        })
+        response = self.client.post('/users/1/delete/')
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(TaskUser.objects.filter(username="user_in_use"))
