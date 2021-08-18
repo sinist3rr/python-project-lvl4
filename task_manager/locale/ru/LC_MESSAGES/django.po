@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 14:26+0000\n"
+"POT-Creation-Date: 2021-08-18 14:43+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,6 +75,10 @@ msgstr "Вход"
 msgid "Sign_in"
 msgstr "Регистрация"
 
+#: task_manager/templates/create_base.html:8
+msgid "CreateButton"
+msgstr "Создать"
+
 #: task_manager/templates/index.html:7
 msgid "TaskManager"
 msgstr "Менеджер задач"
@@ -82,12 +86,6 @@ msgstr "Менеджер задач"
 #: task_manager/templates/index.html:13
 msgid "WelcomeMessage"
 msgstr "Добро пожаловать!"
-
-#: task_manager/templates/labels/create_label.html:16
-#: task_manager/templates/statuses/create_status.html:16
-#: task_manager/templates/tasks/task_create.html:16
-msgid "CreateButton"
-msgstr "Создать"
 
 #: task_manager/templates/labels/delete_label.html:6
 #: task_manager/templates/labels/delete_label.html:11
@@ -198,11 +196,11 @@ msgstr "Метка"
 msgid "FilterTasks"
 msgstr "Только свои задачи"
 
-#: task_manager/templates/users/create_user.html:8
+#: task_manager/templates/users/create_user.html:6
 msgid "CreateUsers"
 msgstr "Регистрация"
 
-#: task_manager/templates/users/create_user.html:15
+#: task_manager/templates/users/create_user.html:13
 msgid "CreateUser"
 msgstr "Зарегистрировать"
 

@@ -1,10 +1,8 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
 
 {% block content %}
-
 <h1>{% trans 'CreateUsers' %}</h1>
 
 <form role="form" method="post">
@@ -13,7 +11,7 @@
     {% bootstrap_form_errors form type='fields' %}
     {% buttons %}
                 <button type="submit" class="btn btn-outline-info">{% translate 'CreateUser' %}</button>
-            {% endbuttons %}
+    {% endbuttons %}
 </form>
 
 {% endblock %}
