@@ -1,17 +1,11 @@
-{% extends "base.html" %}
+{% extends "create_base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
 
-{% block content %}
-<h1>{% trans 'CreateUsers' %}</h1>
+{% block create_header %}
+{% trans 'CreateUsers' %}
+{% endblock %}
 
-<form role="form" method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% bootstrap_form_errors form type='fields' %}
-    {% buttons %}
-                <button type="submit" class="btn btn-outline-info">{% translate 'CreateUser' %}</button>
-    {% endbuttons %}
-</form>
-
+{% block button_name %}
+{% translate 'CreateUser' %}
 {% endblock %}
