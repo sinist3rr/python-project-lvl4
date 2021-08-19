@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-19 14:36+0300\n"
+"POT-Creation-Date: 2021-08-19 14:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,6 +79,10 @@ msgstr "Регистрация"
 msgid "CreateButton"
 msgstr "Создать"
 
+#: task_manager/templates/delete_base.html:10
+msgid "DeleteConfirm"
+msgstr "Да, удалить"
+
 #: task_manager/templates/index.html:7
 msgid "TaskManager"
 msgstr "Менеджер задач"
@@ -88,20 +92,13 @@ msgid "WelcomeMessage"
 msgstr "Добро пожаловать!"
 
 #: task_manager/templates/labels/delete_label.html:6
-#: task_manager/templates/labels/delete_label.html:11
+#: task_manager/templates/labels/delete_label.html:10
 msgid "DeleteLabel"
 msgstr "Удаление метки"
 
-#: task_manager/templates/labels/delete_label.html:14
+#: task_manager/templates/labels/delete_label.html:13
 msgid "AreYouSureToDeleteLabel"
 msgstr "Вы уверены, что хотите удалить "
-
-#: task_manager/templates/labels/delete_label.html:15
-#: task_manager/templates/statuses/delete_status.html:15
-#: task_manager/templates/tasks/task_delete.html:15
-#: task_manager/templates/users/delete_user.html:15
-msgid "DeleteConfirm"
-msgstr "Да, удалить"
 
 #: task_manager/templates/labels/labels.html:12
 msgid "CreateLabel"
@@ -131,11 +128,11 @@ msgid "Delete"
 msgstr "Удалить"
 
 #: task_manager/templates/statuses/delete_status.html:6
-#: task_manager/templates/statuses/delete_status.html:11
+#: task_manager/templates/statuses/delete_status.html:10
 msgid "DeleteStatus"
 msgstr "Удаление статуса"
 
-#: task_manager/templates/statuses/delete_status.html:14
+#: task_manager/templates/statuses/delete_status.html:13
 msgid "AreYouSureToDeleteStatus"
 msgstr "Вы уверены, что хотите удалить "
 
@@ -150,11 +147,11 @@ msgid "CreateTask"
 msgstr "Создать задачу"
 
 #: task_manager/templates/tasks/task_delete.html:6
-#: task_manager/templates/tasks/task_delete.html:11
+#: task_manager/templates/tasks/task_delete.html:10
 msgid "DeleteTask"
 msgstr "Удаление задачи"
 
-#: task_manager/templates/tasks/task_delete.html:14
+#: task_manager/templates/tasks/task_delete.html:13
 msgid "AreYouSureToDeleteTask"
 msgstr "Вы уверены, что хотите удалить "
 
@@ -203,11 +200,11 @@ msgid "CreateUser"
 msgstr "Зарегистрировать"
 
 #: task_manager/templates/users/delete_user.html:6
-#: task_manager/templates/users/delete_user.html:11
+#: task_manager/templates/users/delete_user.html:10
 msgid "DeleteUser"
 msgstr "Удаление пользователя"
 
-#: task_manager/templates/users/delete_user.html:14
+#: task_manager/templates/users/delete_user.html:13
 msgid "AreYouSureToDeleteUser"
 msgstr "Вы уверены, что хотите удалить "
 

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "delete_base.html" %}
 {% load i18n %}
 {% load bootstrap4 %}
 
@@ -6,13 +6,9 @@
 {% trans 'DeleteStatus' %}
 {% endblock %}
 
-{% block content %}
-<div class="container wrapper flex-grow-1">
-    <h1>{% trans 'DeleteStatus' %}</h1>
-    <form method="post">
-        {% csrf_token %}
-        <p>{% trans 'AreYouSureToDeleteStatus' %}{{ status.name }}'?'</p>
-        <button type="Submit" class="btn btn-danger">{% trans 'DeleteConfirm' %}</button>
-    </form>
-</div>
+{% block delete_title %}
+{% trans 'DeleteStatus' %}
+{% endblock %}
+{% block delete_question %}
+{% trans 'AreYouSureToDeleteStatus' %}{{ status.name }}'?'
 {% endblock %}
