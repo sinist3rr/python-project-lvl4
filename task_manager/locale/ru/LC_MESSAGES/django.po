@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-18 16:05+0000\n"
+"POT-Creation-Date: 2021-08-19 14:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgstr "Вход"
 msgid "Sign_in"
 msgstr "Регистрация"
 
-#: task_manager/templates/create_base.html:13
+#: task_manager/templates/create_base.html:11
 msgid "CreateButton"
 msgstr "Создать"
 
@@ -117,7 +117,7 @@ msgstr "Имя"
 #: task_manager/templates/statuses/statuses.html:28
 #: task_manager/templates/tasks/task_detail.html:48
 #: task_manager/templates/tasks/tasks.html:82
-#: task_manager/templates/update_base.html:13
+#: task_manager/templates/update_base.html:11
 #: task_manager/templates/users/users.html:32
 msgid "Update"
 msgstr "Изменить"
