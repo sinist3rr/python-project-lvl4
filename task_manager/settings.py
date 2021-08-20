@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
+from django.urls import reverse_lazy
 import django_heroku  # type: ignore
 import rollbar  # type: ignore
 import os
@@ -138,7 +139,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'login'
+LOGIN_URL = reverse_lazy('login')
 
 django_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
