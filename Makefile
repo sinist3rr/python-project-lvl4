@@ -12,7 +12,7 @@ test:
 
 lint:
 	poetry run flake8 --exclude=*/migrations/* task_manager users statuses tasks labels
-	poetry run mypy task_manager
+	poetry run mypy task_manager users statuses tasks labels
 
 selfcheck:
 	poetry check

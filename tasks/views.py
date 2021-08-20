@@ -7,7 +7,7 @@ from django.views.generic import CreateView, DeleteView, DetailView, UpdateView
 from .forms import TaskForm
 from .models import Task
 from django.shortcuts import redirect
-from django_filters.views import FilterView
+from django_filters.views import FilterView  # type: ignore
 from .filters import TasksFilter
 
 

@@ -1,5 +1,6 @@
 from django.forms import CheckboxInput
-from django_filters import BooleanFilter, FilterSet, ModelChoiceFilter
+from django_filters import BooleanFilter  # type: ignore
+from django_filters import FilterSet, ModelChoiceFilter
 from .models import Task, Label
 
 
