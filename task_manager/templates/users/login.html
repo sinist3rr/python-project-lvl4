@@ -8,15 +8,14 @@
 
 
 {% block content %}
-
-<h1>{% translate 'LoginUsers' %}</h1>
-
-<form role="form" method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-                <button type="submit" class="btn btn-outline-primary">{% translate 'LoginButton' %}</button>
-            {% endbuttons %}
-</form>
-
+<div class="container wrapper flex-grow-1">
+    <h1>{% translate 'LoginUsers' %}</h1>
+    <form role="form" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+             <button type="submit" class="btn btn-outline-primary">{% translate 'LoginButton' %}</button>
+        {% endbuttons %}
+    </form>
+</div>
 {% endblock %}
